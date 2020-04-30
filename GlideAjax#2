@@ -1,0 +1,11 @@
+function onload() {
+//Type appropriate comment here,and brgin srcipt below
+var ga = new GlideAjax('ServiceNow203GlideAjax');
+ga.addParm('sysparm_name', 'sayHelloagainLB');
+ga.getXML(ajaxPRocessor)
+}
+
+funtion ajaxProcessor(response) {
+var answer = response.responseXML.documentElement.getAttribute('answer');
+g_form.setValue('short_dscription', answer);
+}
